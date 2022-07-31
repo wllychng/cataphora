@@ -1,0 +1,36 @@
+context_1	context_2		example	set_id	condition	type
+The scholarship competition had been going on for two weeks now, and only two eligible students remained. 			It was clear to Sue's professors that she would win the scholarship, but Ben decided to apply for it anyway.	K07_1_F_direct	A_ana	
+			It was clear to Sue that she would win the scholarship, but Ben decided to apply for it anyway.	K07_1_F_direct	U_ana	
+	The Gemini scholarship was one of the most competitive awards to obtain. Mark had already sent in an application and had been rejected. 		It was clear to her professors that Sue would win the scholarship, but Ben decided to continue with the competition anyway.	K07_1_F_direct	A_cat	
+			It was clear to her that Sue would win the scholarship, but Ben decided to continue with the competition anyway.	K07_1_F_direct	U_cat	
+			it would Sue her anyway for apply was that, professors decided clear but win to it Ben the to scholarship.	K07_1_F_direct	A_scramble	
+			for to to was her scholarship decided clear, the anyway that it Sue but would it apply win Ben.	K07_1_F_direct	U_scramble	
+The summer reading challenge was coming to an end in the following week. 	The summer reading challenge was coming to an end the following week. It had turned out to be more demanding than Maggie had anticipated.	The summer reading challenge that the two friends had set up would come to an end the following week. 	It was surprising to Carl's classmates that he hadn't finished reading the book, although Anne too had found it quite difficult.	K07_3_M_direct	A_ana	
+			It was surprising to Carl that he hadn't finished reading the book, although Anne too had found it quite difficult.	K07_3_M_direct	U_ana	
+			It was surprising to his classmates that Carl hadn't finished reading the book, although Anne too had found it quite demanding.	K07_3_M_direct	A_cat	
+			It was surprising to him that Carl hadn't finished reading the book, although Anne too had found it quite difficult.	K07_3_M_direct	U_cat	
+			X	K07_3_M_direct	A_scramble	
+			Y	K07_3_M_direct	U_scramble	
+						
+Starting university had been difficult for the two siblings, and it was the longest they had been apart. Finally the mid-semester break arrived, and so	Summer had finally arrived, and travel plans were being made. Paul decided to go on vacation in Mexico.		Her brother decided to visit Lisa in Spain.	GH97_1		
+			She visited Lisa's brother at college.			
+It was the perfect summer day to spend outdoors. Mary went for a jog along the river.			His roommates met John at the park.			
+						
+						
+It was a dark night, and the landscape was barren and desolate. On the road was a lone car with two passengers. Maggie was fast asleep in the passenger seat. 			He was rubbing his tired eyes in fatigue when Jack spotted the motel.	HB02_1		
+			He rubbed his tired eyes in fatigue just as Jack spotted the motel.			
+It was a quiet Sunday, and the couple had plans to get some chores done. Jack was outside mowing the lawn. 			She was finishing the meal preparations when Maggie remembered the afternoon doctor's appointment.			
+It was a quiet Sunday, and the couple had planned on getting some chores done. Jack was outside mowing the lawn. 			She finished the meal preparations before Maggie remembered the afternoon doctor's appointment.			
+						
+History was a difficult subject for the two students, so they decided to become study partners. At their weekly study session, 			He gave Fiona Matt's class notes	Gor2020		
+			Matt gave Fiona his class notes			
+			Fiona gave him Matt's X			
+			Fiona gave Matt his X			
+			He showed Fiona Matt's favorite movie			
+The company was growing quickly, so the two business partners decided to move. In the new building, 			Fiona showed him Matt's office			
+			He showed Fiona Matt's office			
+						
+			He offered Fiona Matt's lunch			
+			Fiona offered him Matt's			
+			He sent Fiona Matt's X			
+			Fiona sent him Matt's X			
