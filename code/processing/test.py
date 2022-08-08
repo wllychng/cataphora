@@ -17,6 +17,7 @@ args = argParser.parse_args()
 print(f"data file: {args.data_file}")
 
 df = pd.read_excel(args.data_file, sheet_name="test_set", usecols="A,D:G")
+print(df.head())
 
 loss = [] 
 
@@ -35,4 +36,5 @@ print(df)
 file_path = Path(args.data_file)
 out_filename = str(file_path.stem) + "_loss" + str(file_path.suffix)
 print(f"out file: {out_filename}")
+
 # out_file = file_path.parent + file_path.stem + "_loss" + file_path.suffix
