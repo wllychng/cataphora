@@ -7,6 +7,7 @@ import torch
 from pathlib import Path
 import csv
 from load_tsv import load_tsv, DataFileType
+import pandas as pd 
 
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 print(f"device: {device}")
@@ -19,10 +20,19 @@ tokenizer = GPT2TokenizerFast.from_pretrained(MODEL)
 # the perplexity of correct sentence should be lower than scrambled words
 # the perplexity of subj-verb agreement sentence should be lower than non-agreement
 
-DATA_DIR = "/home/cheung.179/cataphora_data"
-DATASETS = [Path(DATA_DIR, "Kazanina07_direct.tsv")]
+#DATA_DIR = "/home/cheung.179/cataphora_data"
+#DATASETS = [Path(DATA_DIR, "Kazanina07_direct.tsv")]
 
-data = load_tsv(DATASETS[0], DataFileType.DIRECT)
+DATASET = "../../data/test_dataset.xlsx"
+
+df = pd.read_excel(DATASET, sheet_name="test_set", usecols="A,D:G")
+
+loss = []
+
+for idx, row in df.iterrows():
+	encodings = tokenizer(X, return_tensors=:"pt")
+
+#data = load_tsv(DATASETS[0], DataFileType.DIRECT)
 
 OUT_TSV_FILE = Path(DATA_DIR, MODEL+"_output.tsv")
 
