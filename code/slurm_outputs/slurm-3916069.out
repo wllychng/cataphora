@@ -1,0 +1,20 @@
+device: cuda:0
+set_id: K07_1_F_direct
+condition: A_ana
+example: It was clear to Sue's professors that she would win the scholarship, but Ben decided to apply for it anyway.
+loss: 3.3963310718536377
+condition: U_ana
+example: It was clear to Sue that she would win the scholarship, but Ben decided to apply for it anyway.
+loss: 3.3732211589813232
+condition: A_cat
+example: It was clear to her professors that Sue would win the scholarship, but Ben decided to apply for it anyway.
+loss: 3.52140736579895
+condition: U_cat
+example: It was clear to her that Sue would win the scholarship, but Ben decided to apply for it anyway.
+loss: 3.465083360671997
+condition: A_scramble
+example: it would Sue her anyway for apply was that, professors decided clear but win to it Ben the to scholarship.
+loss: 8.192479133605957
+condition: U_scramble
+example: for to to was her scholarship decided clear, the anyway that it Sue but would it apply win Ben.
+loss: 7.786633491516113

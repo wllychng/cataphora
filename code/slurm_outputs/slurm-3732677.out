@@ -1,0 +1,32 @@
+he token id: 258
+she token id: tensor([[7091]])
+tokenized_input_ids, from dictionary key access: tensor([[ 8421,  1757,  2925,   284,   262,  3650,    11,   339,  7832,   284,
+          1011,   257, 14643,    13]])
+tokenized_input_ids, from class field access: tensor([[ 8421,  1757,  2925,   284,   262,  3650,    11,   339,  7832,   284,
+          1011,   257, 14643,    13]])
+tokenized input: {'input_ids': tensor([[ 8421,  1757,  2925,   284,   262,  3650,    11,   339,  7832,   284,
+          1011,   257, 14643,    13]]), 'attention_mask': tensor([[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]])}
+size of initial input_ids: torch.Size([1, 14])
+new input ids: tensor([[8421, 1757]])
+size of new input ids: torch.Size([1, 2])
+old input: {'input_ids': tensor([[ 8421,  1757,  2925,   284,   262,  3650,    11,   339,  7832,   284,
+          1011,   257, 14643,    13]]), 'attention_mask': tensor([[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]])})
+new input: {'input_ids': tensor([[ 8421,  1757,  2925,   284,   262,  3650,    11,   339,  7832,   284,
+          1011,   257, 14643,    13]]), 'attention_mask': tensor([[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]])})
+token text: Before John goes to the store, he likes to take a shower.
+output.logits: tensor([[[ -34.2715,  -33.9879,  -37.3477,  ...,  -41.4273,  -40.1822,
+           -34.2533],
+         [ -80.0802,  -79.4911,  -84.0394,  ...,  -89.1227,  -83.1543,
+           -80.2935],
+         [-104.1957, -104.2824, -108.9173,  ..., -111.9672, -113.0354,
+          -104.2803],
+         ...,
+         [-127.1104, -124.8085, -129.2180,  ..., -134.9488, -127.7601,
+          -126.9886],
+         [-112.0206, -113.5066, -118.6994,  ..., -129.5429, -124.5136,
+          -116.2793],
+         [-164.6559, -162.2086, -165.2196,  ..., -176.5393, -178.0520,
+          -156.9454]]])
+type of output.logits: <class 'torch.Tensor'>
+size of output.logits: torch.Size([1, 14, 50257])
+size of surps: torch.Size([1, 14, 50257])
