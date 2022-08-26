@@ -1,2 +1,5 @@
-slurm*
+# ignore the slurm outputs stored in dir
+slurm-outputs
+# ignore temporary files
 *.swp
+
