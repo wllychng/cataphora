@@ -12,8 +12,8 @@ import pandas as pd
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 print(f"device: {device}")
 #MODEL = "gpt2-medium"
-#MODEL = "gpt2"
-MODEL = "gpt2-large"
+MODEL = "gpt2"
+#MODEL = "gpt2-large"
 model = GPT2LMHeadModel.from_pretrained(MODEL).to(device)
 tokenizer = GPT2TokenizerFast.from_pretrained(MODEL)
 
@@ -30,7 +30,7 @@ df = pd.read_excel(DATASET, sheet_name="test_set", usecols="A,D:G")
 loss = []
 
 for idx, row in df.iterrows():
-	encodings = tokenizer(X, return_tensors=:"pt")
+	encodings = tokenizer(X, return_tensors="pt")
 
 #data = load_tsv(DATASETS[0], DataFileType.DIRECT)
 

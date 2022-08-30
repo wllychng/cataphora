@@ -10,10 +10,13 @@
 #SBATCH --mail-user=cheung.179@osu.edu
 #SBATCH --partition white-1gpu
 
-BASE_DIR=~/LM
+BASE_DIR=~/cataphora/code
 cd $BASE_DIR
 
-python GPT2_PPL_test2.py
+python run_GPT2.py
+
+# python GPT2_PPL_test2.py
+
 # python GPT2_PPL_test.py
 # python GPT2_PPL_ex.py
 # python GPT2_word_surprisal.py

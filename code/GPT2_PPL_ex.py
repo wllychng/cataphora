@@ -1,3 +1,5 @@
+# example for calculating perplexity (PPL), given in HF docs
+
 from transformers import GPT2LMHeadModel, GPT2TokenizerFast
 from datasets import load_dataset
 import torch

@@ -1,72 +1,61 @@
 
-# 6/30/22 edit/copy, runs stimuli through GPT2 model, using pandas to access data 
-
-# new version of running GPT2 to get loss from stimuli
-# does not use CataphoraDataset class (subclass of HF Dataset);
-# instead, simply uses a dictionary to store/access the stimuli data 
+# 8/26/22 copy: process stimuli through GPT2, use pandas to access data
 
 from transformers import GPT2LMHeadModel, GPT2TokenizerFast
 import torch
-from pathlib import Path
-# import csv
-# from load_tsv import load_tsv, DataFileType
 import pandas as pd
-# from numpy import nan
+from pathlib import Path
+import argparse
+from stimuli_utils import clean_stimuli
 
-device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
-print(f"device: {device}")
-#MODEL = "gpt2-medium"
-#MODEL = "gpt2"
-MODEL = "gpt2-large"
-model = GPT2LMHeadModel.from_pretrained(MODEL).to(device)
-tokenizer = GPT2TokenizerFast.from_pretrained(MODEL)
+DATA_DIR = Path("../data")
 
-DATA_DIR = "/home/cheung.179/cataphora_data"
-DATASETS = [Path(DATA_DIR, "Kazanina07_direct.tsv")]
+argParser = argparse.ArgumentParser()
+argParser.add_argument("--dataset", default="sample_all.tsv")
+argParser.add_argument("--model", default="gpt2", choices=["gpt2", "gpt2-medium", "gpt2-large"])
+args = argParser.parse_args()
 
-df = pd.read_csv(DATASETS[0], sep="\t")
-for i in df.index:
-	print(df.loc[i])
+print(f"dataset: {args.dataset}")
+print(f"model: {args.model}")
 
-df[] = nan*df.shape[0]
+# set up neural model
+DEVICE = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+print(f"device: {DEVICE}")
+model = GPT2LMHeadModel.from_pretrained(args.model).to(DEVICE)
+tokenizer = GPT2TokenizerFast.from_pretrained(args.model)
 
-# make a new df that contains minimal pair	
+# df = pd.read_excel(args.data_file, sheet_name="test_set", usecols="A,D:G")
+df = pd.read_csv(DATA_DIR / args.dataset, sep="\t")
+print(df)
+
+df = clean_stimuli(df)
+print(df)
 
 exit()
 
-# don't write tsv file manually; make/edit pandas df, then use df.to_csv() to write at the end
+loss = [] 
 
-# delete rows that are missing a set_id value
+for idx,row in df.iterrows():
+    # extract necessary values from the df row
+	# need the text example	
+	temp_example = 1
+	print(f"idx: {idx}")
+	print(f'set_id: {row["set_id"]}')
+	print(f'accept condition: {row["accept_condition"]}')
 
+	# interface with neural model
+	encodings = tokenizer(example, return_tensors="pt")
+	input_ids = 1
+	
+	loss.append(idx)
 
-OUT_TSV_FILE = Path(DATA_DIR, MODEL+"_output.tsv")
+df["loss"] = loss
 
-# make list with set_ids to iterate over
-X = df["set_id"].unique()
-print(X)
-exit()
+print(df)
+# df.to_tsv()
 
-with open(OUT_TSV_FILE, 'w') as out_file:
-	# make a new tsv with just the example, id, and loss
-	out_fieldnames = ["example", "set_id", "condition_id", "loss"]
-	out_tsv = csv.DictWriter(out_file, dialect="excel-tab", fieldnames=out_fieldnames)
-	out_tsv.writeheader()
+file_path = Path(args.data_file)
+out_filename = str(file_path.stem) + "_loss" + str(file_path.suffix)
+print(f"out file: {out_filename}")
 
-	for set_id, cond_dict in data.items():
-		# data is a dictionary, x is a string key of the dictionary
-		print(f"set_id: {set_id}")
-		for cond, example in cond_dict.items():
-			print(f"condition: {cond}")
-			print(f"example: {example}")
-		
-			encodings = tokenizer(example, return_tensors="pt")
-			input_ids = encodings.input_ids.to(device)
-			target_ids = input_ids.clone()
-			with torch.no_grad():
-				outputs = model(input_ids, labels=target_ids)
-			loss = outputs.loss.item()
-			print(f"loss: {loss}")
-			out_tsv.writerow({"example":example, "set_id":set_id, "condition_id":cond, "loss":loss})
-			#perplexity = torch.exp(outputs.loss)
-			#print(f"PPL: {perplexity}")
-
+# out_file = file_path.parent + file_path.stem + "_loss" + file_path.suffix
