@@ -1,5 +1,10 @@
 # script that takes a stimuli csv file in long format (a row for each item), and turns it into wide format, where each row represents two stimuli of minimal pair
 
+# post-process data after running HuggingFace, 
+# 1) set up a new df that holds minimal pair (MP) data
+# 2) from original df, make a unique vector of set_id to iterate over
+# 3) for each set_id, get the relevant rows/info, add a new row to the new df 
+
 import pandas as pd
 import argparse
 from pathlib import Path
