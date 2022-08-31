@@ -24,30 +24,29 @@ print(f"device: {DEVICE}")
 model = GPT2LMHeadModel.from_pretrained(args.model).to(DEVICE)
 tokenizer = GPT2TokenizerFast.from_pretrained(args.model)
 
-# df = pd.read_excel(args.data_file, sheet_name="test_set", usecols="A,D:G")
 df = pd.read_csv(DATA_DIR / args.dataset, sep="\t")
 print(df)
 
 df = clean_stimuli(df)
 print(df)
 
-exit()
-
 loss = [] 
 
-for idx,row in df.iterrows():
+for row in df.itertuples():
     # extract necessary values from the df row
-	# need the text example	
-	temp_example = 1
-	print(f"idx: {idx}")
-	print(f'set_id: {row["set_id"]}')
-	print(f'accept condition: {row["accept_condition"]}')
+	# need the text example
+	temp_example = row.example
+	print(f"temp_example: {temp_example}")
+	print(f"row: {row}")	
 
 	# interface with neural model
-	encodings = tokenizer(example, return_tensors="pt")
-	input_ids = 1
-	
-	loss.append(idx)
+	encodings = tokenizer(temp_example, return_tensors="pt")
+	input_ids = encodings.input_ids.to(DEVICE)
+	target_ids = input_ids.clone()
+	with torch.no_grad():
+		outputs = model(input_ids, labels=target_ids)
+	print(f"HF outputs: {outputs}")
+	loss.append(outputs.loss.item())
 
 df["loss"] = loss
 
