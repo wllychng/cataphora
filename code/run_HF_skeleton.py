@@ -3,7 +3,7 @@
 import torch
 from transformers import GPT2LMHeadModel, GPT2TokenizerFast
 
-test_sentence = "hello world"
+test_sentence = "X"
 
 DEVICE = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 model = GPT2LMHeadModel.from_pretrained("gpt2").to(DEVICE)
