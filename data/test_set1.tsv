@@ -1,0 +1,17 @@
+context_1	context_2	context_3	high_loss_example	low_loss_example	set_id	cataphora_condition
+			In the library, Sam gave a book Pamela.	In the library, Sam gave Pamela a book.	filler_ditransitive	
+			In the last meeting, Kim were criticizing Alan.	In the last meeting, Kim was criticizing Alan.	filler_SVAgree_01	
+			During the weekly meeting, John insulted Mary while praising herself.	During the weekly meeting, John insulted Mary while praising himself.	filler_reflexive_01	
+			During the rehearsal, John seemed very pleased. 	During the rehearsal, John seemed very.	filler_argument?	
+			Amy showed him Paul's new office.	Amy showed Paul his new office.	G20_01	A
+			At the train station, Toby told Sarah to take care of himself.	At the train station, Toby told Sarah to take care of herself.	filler_reflexive_02	
+			It was clear to her that Sue would win the scholarship	It was clear to Sue that she would win the scholarship	K01_01	U
+			During the first act, the children amused.	During the first act, the children amused the audience.	filler_argument?	
+			His roommate met John at the park.	John's roommate met him at the park.	GH98_01	A
+			At the main table, he gave Fiona Matt's class notes.	At the main table, Matt gave Fiona his class notes.	G20_02	U
+			After dinner, Lisa showed a picture from the trip Tom.	After dinner, Lisa showed Tom a picture from the trip.	filler_ditransitive	
+			It was surprising to his classmates that Carl wasn't able to complete the reading.	It was surprising to Carl's classmates that he wasn't able to complete the reading.	K01_02	A
+			She visited Lisa's brother in Spain.	Lisa visited her brother in Spain	GH98_02	U
+			On Tuesday, Brad were bragging about the latest win.	On Tuesday, Brad was bragging about the latest win.	filler_SVAgree_02	
+			He rubbed his tired eyes in fatigue just as Larry spotted the motel.	Larry rubbed his tired eyes in fatigue just as he spotted the motel.	HB02_01	U
+			She was finishing the meal preparations when Maggie remembered the doctor appointment in the afternoon. 	Maggie was finishing the meal preparations when she remembered the doctor appointment in the afternoon. 	HB02_02	A
