@@ -43,10 +43,12 @@ for row in df.itertuples():
 	encodings = tokenizer(temp_example, return_tensors="pt")
 	input_ids = encodings.input_ids.to(DEVICE)
 	target_ids = input_ids.clone()
+	print(f"input_ids: {input_ids}")
+	print(f"target_ids: {target_ids}")
 	with torch.no_grad():
 		outputs = model(input_ids, labels=target_ids)
-	print(f"HF outputs: {outputs}")
-	loss.append(outputs.loss.item())
+	print(f"HF loss: {outputs.loss.item()}")
+	# loss.append(outputs.loss.item())
 
 df["loss"] = loss
 

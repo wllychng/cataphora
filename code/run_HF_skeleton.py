@@ -3,7 +3,9 @@
 import torch
 from transformers import GPT2LMHeadModel, GPT2TokenizerFast
 
-test_sentence = "X"
+# loss does not work with only a single token
+# test_sentence = "X"
+test_sentence = "hello world"
 
 DEVICE = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 model = GPT2LMHeadModel.from_pretrained("gpt2").to(DEVICE)
@@ -16,3 +18,4 @@ with torch.no_grad():
     outputs = model(input_ids, labels=target_ids)
 print(f"HF outputs: {outputs}")
 print(f"type of outputs: {type(outputs)}")
+print(f"loss: {outputs.loss.item()}")
