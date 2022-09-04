@@ -6,12 +6,12 @@ import torch
 import pandas as pd
 from pathlib import Path
 import argparse
-from stimuli_utils import clean_stimuli
+from stimuli_utils import clean_stimuli, make_output_filename
 
 DATA_DIR = Path("../data")
 
 argParser = argparse.ArgumentParser()
-argParser.add_argument("--dataset", default="sample_all.tsv")
+argParser.add_argument("--dataset", default="test_set1.tsv")
 argParser.add_argument("--model", default="gpt2", choices=["gpt2", "gpt2-medium", "gpt2-large"])
 args = argParser.parse_args()
 
@@ -25,38 +25,40 @@ model = GPT2LMHeadModel.from_pretrained(args.model).to(DEVICE)
 tokenizer = GPT2TokenizerFast.from_pretrained(args.model)
 
 df = pd.read_csv(DATA_DIR / args.dataset, sep="\t")
-print(df)
-
 df = clean_stimuli(df)
 print(df)
 
-loss = [] 
+high_loss = [] 
+low_loss = []
 
 for row in df.itertuples():
     # extract necessary values from the df row
 	# need the text example
-	temp_example = row.example
-	print(f"temp_example: {temp_example}")
-	print(f"row: {row}")	
+	low_loss_ex = row.low_loss_example
+	high_loss_ex = row.high_loss_example
+	print(f"high loss example: {high_loss_ex}")
+	print(f"low loss example: {low_loss_ex}")
 
 	# interface with neural model
-	encodings = tokenizer(temp_example, return_tensors="pt")
-	input_ids = encodings.input_ids.to(DEVICE)
-	target_ids = input_ids.clone()
-	print(f"input_ids: {input_ids}")
-	print(f"target_ids: {target_ids}")
+	low_encodings = tokenizer(low_loss_ex, return_tensors="pt")
+	low_input_ids = low_encodings.input_ids.to(DEVICE)
 	with torch.no_grad():
-		outputs = model(input_ids, labels=target_ids)
-	print(f"HF loss: {outputs.loss.item()}")
-	# loss.append(outputs.loss.item())
+		low_outputs = model(low_input_ids, labels=low_input_ids.clone())
+	low_loss.append(low_outputs.loss.item())
+	
+	high_encodings = tokenizer(high_loss_ex, return_tensors="pt")
+	high_input_ids = high_encodings.input_ids.to(DEVICE)
+	with torch.no_grad():
+		high_outputs = model(high_input_ids, labels = high_input_ids.clone())
+	# print(f"HF loss: {outputs.loss.item()}")
+	high_loss.append(high_outputs.loss.item())
 
-df["loss"] = loss
+df["low_loss"] = low_loss
+df["high_loss"] = high_loss
 
-print(df)
-# df.to_tsv()
+# print(df)
 
-file_path = Path(args.data_file)
-out_filename = str(file_path.stem) + "_loss" + str(file_path.suffix)
+out_filename = make_output_filename(args.dataset, "lossNN", "../results")
 print(f"out file: {out_filename}")
 
-# out_file = file_path.parent + file_path.stem + "_loss" + file_path.suffix
+df.to_csv(out_filename, sep = "\t")
