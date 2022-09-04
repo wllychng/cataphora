@@ -8,11 +8,12 @@
 import pandas as pd
 import argparse
 from pathlib import Path
+from stimuli_utils import make_output_filename
 
 DEFAULT_FILE = "../data/sample_all.tsv"
 
 argParser = argparse.ArgumentParser()
-argParser.add_argument("data_file", nargs="?", default=DEFAULT_FILE)
+argParser.add_argument("data_file", nargs="?", default=None)
 args = argParser.parse_args()
 
 print(f"data file: {args.data_file}")

@@ -36,8 +36,8 @@ for row in df.itertuples():
 	# need the text example
 	low_loss_ex = row.low_loss_example
 	high_loss_ex = row.high_loss_example
-	print(f"high loss example: {high_loss_ex}")
-	print(f"low loss example: {low_loss_ex}")
+	#print(f"high loss example: {high_loss_ex}")
+	#print(f"low loss example: {low_loss_ex}")
 
 	# interface with neural model
 	low_encodings = tokenizer(low_loss_ex, return_tensors="pt")
@@ -53,10 +53,10 @@ for row in df.itertuples():
 	# print(f"HF loss: {outputs.loss.item()}")
 	high_loss.append(high_outputs.loss.item())
 
-df["low_loss"] = low_loss
 df["high_loss"] = high_loss
+df["low_loss"] = low_loss
 
-# print(df)
+df["loss_diff"] = df["high_loss"] - df["low_loss"]
 
 out_filename = make_output_filename(args.dataset, "lossNN", "../results")
 print(f"out file: {out_filename}")
