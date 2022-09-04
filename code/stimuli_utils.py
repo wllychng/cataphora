@@ -45,3 +45,6 @@ if __name__ == "__main__":
 	print(f"test output dir: {OUTPUT_DIR}")
 	output = make_output_filename(INPUT_PATH, STR_IDENTIFIER, OUTPUT_DIR)
 	print(f"running make_output_filename: {output}")
+
+	output = make_output_filename(INPUT_PATH, STR_IDENTIFIER)
+	print(f"running make_output_filename, with no argument for output_dir: {output}")

@@ -8,10 +8,8 @@ from pathlib import Path
 import argparse
 from stimuli_utils import clean_stimuli, make_output_filename
 
-DATA_DIR = Path("../data")
-
 argParser = argparse.ArgumentParser()
-argParser.add_argument("--dataset", default="test_set1.tsv")
+argParser.add_argument("--dataset", default="../data/test_set1.tsv")
 argParser.add_argument("--model", default="gpt2", choices=["gpt2", "gpt2-medium", "gpt2-large"])
 args = argParser.parse_args()
 
@@ -24,9 +22,9 @@ print(f"device: {DEVICE}")
 model = GPT2LMHeadModel.from_pretrained(args.model).to(DEVICE)
 tokenizer = GPT2TokenizerFast.from_pretrained(args.model)
 
-df = pd.read_csv(DATA_DIR / args.dataset, sep="\t")
+df = pd.read_csv(Path(args.dataset), sep="\t")
 df = clean_stimuli(df)
-print(df)
+#print(df)
 
 high_loss = [] 
 low_loss = []
@@ -36,8 +34,8 @@ for row in df.itertuples():
 	# need the text example
 	low_loss_ex = row.low_loss_example
 	high_loss_ex = row.high_loss_example
-	#print(f"high loss example: {high_loss_ex}")
-	#print(f"low loss example: {low_loss_ex}")
+	print(f"high loss example: {high_loss_ex}")
+	print(f"low loss example: {low_loss_ex}")
 
 	# interface with neural model
 	low_encodings = tokenizer(low_loss_ex, return_tensors="pt")
@@ -58,7 +56,7 @@ df["low_loss"] = low_loss
 
 df["loss_diff"] = df["high_loss"] - df["low_loss"]
 
-out_filename = make_output_filename(args.dataset, "lossNN", "../results")
+out_filename = make_output_filename(args.dataset, "lossNN")
 print(f"out file: {out_filename}")
 
 df.to_csv(out_filename, sep = "\t")

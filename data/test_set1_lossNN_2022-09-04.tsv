@@ -1,0 +1,17 @@
+	context_1	context_2	context_3	high_loss_example	low_loss_example	set_id	cataphora_condition	high_loss	low_loss	loss_diff
+0				In the library, Sam gave a book Pamela.	In the library, Sam gave Pamela a book.	filler_ditransitive		6.519850254058838	5.443653106689453	1.0761971473693848
+1				In the last meeting, Kim were criticizing Alan.	In the last meeting, Kim was criticizing Alan.	filler_SVAgree_01		6.164756774902344	5.57490348815918	0.5898532867431641
+2				During the weekly meeting, John insulted Mary while praising herself.	During the weekly meeting, John insulted Mary while praising himself.	filler_reflexive_01		5.822835922241211	5.849480152130127	-0.026644229888916016
+3				During the rehearsal, John seemed very pleased. 	During the rehearsal, John seemed very.	filler_argument?		5.111592769622803	5.703949928283691	-0.5923571586608887
+4				Amy showed him Paul's new office.	Amy showed Paul his new office.	G20_01	A	5.4063286781311035	5.971193790435791	-0.5648651123046875
+5				At the train station, Toby told Sarah to take care of himself.	At the train station, Toby told Sarah to take care of herself.	filler_reflexive_02		3.8490755558013916	3.711301565170288	0.13777399063110352
+6				It was clear to her that Sue would win the scholarship	It was clear to Sue that she would win the scholarship	K01_01	U	4.447461128234863	4.337973594665527	0.10948753356933594
+7				During the first act, the children amused.	During the first act, the children amused the audience.	filler_argument?		4.972501754760742	4.191099643707275	0.7814021110534668
+8				His roommate met John at the park.	John's roommate met him at the park.	GH98_01	A	5.378275394439697	4.051446914672852	1.3268284797668457
+9				At the main table, he gave Fiona Matt's class notes.	At the main table, Matt gave Fiona his class notes.	G20_02	U	5.6448655128479	5.429635047912598	0.21523046493530273
+10				After dinner, Lisa showed a picture from the trip Tom.	After dinner, Lisa showed Tom a picture from the trip.	filler_ditransitive		5.388521194458008	4.334157466888428	1.05436372756958
+11				It was surprising to his classmates that Carl wasn't able to complete the reading.	It was surprising to Carl's classmates that he wasn't able to complete the reading.	K01_02	A	4.012236595153809	3.8851587772369385	0.12707781791687012
+12				She visited Lisa's brother in Spain.	Lisa visited her brother in Spain	GH98_02	U	5.678006649017334	5.188622951507568	0.4893836975097656
+13				On Tuesday, Brad were bragging about the latest win.	On Tuesday, Brad was bragging about the latest win.	filler_SVAgree_02		5.3072919845581055	5.044521331787109	0.2627706527709961
+14				He rubbed his tired eyes in fatigue just as Larry spotted the motel.	Larry rubbed his tired eyes in fatigue just as he spotted the motel.	HB02_01	U	5.922913074493408	5.225451469421387	0.6974616050720215
+15				She was finishing the meal preparations when Maggie remembered the doctor appointment in the afternoon. 	Maggie was finishing the meal preparations when she remembered the doctor appointment in the afternoon. 	HB02_02	A	5.764573097229004	5.05625057220459	0.7083225250244141
