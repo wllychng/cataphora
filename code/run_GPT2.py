@@ -56,7 +56,7 @@ df["low_loss"] = low_loss
 
 df["loss_diff"] = df["high_loss"] - df["low_loss"]
 
-out_filename = make_output_filename(args.dataset, "lossNN")
+out_filename = make_output_filename(args.dataset, args.model+"_"+"lossNN")
 print(f"out file: {out_filename}")
 
 df.to_csv(out_filename, sep = "\t")

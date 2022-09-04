@@ -13,9 +13,9 @@
 BASE_DIR=~/cataphora/code
 cd $BASE_DIR
 
-# python run_HF_skeleton.py
-
-python run_GPT2.py
+python run_GPT2.py --model "gpt2" 
+python run_GPT2.py --model "gpt2-medium"
+python run_GPT2.py --model "gpt2-large"
 
 # python GPT2_PPL_test2.py
 
