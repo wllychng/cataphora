@@ -1,0 +1,5 @@
+condition	truncated_stimuli	truncated_tokenized_stimuli	tokens_of_interest	token_ids_of_interest
+C_MM	It was clear to her that Ben	FILL FROM CODE OUTPUT	MANUALLY EDIT	FILL FROM CODE
+noC_MM	It was clear to her professors that Ben			
+C_MM	It seemed suspicious to her that Jim			
+noC_MM	It seemed suspicious to her neighbors that Jim			
