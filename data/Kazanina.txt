@@ -1,5 +1,21 @@
 condition	truncated_stimuli	truncated_tokenized_stimuli	tokens_of_interest	token_ids_of_interest
-C_MM	It was clear to her that Ben	FILL FROM CODE OUTPUT	MANUALLY EDIT	FILL FROM CODE
+C_MM	It was clear to her that Ben			
 noC_MM	It was clear to her professors that Ben			
 C_MM	It seemed suspicious to her that Jim			
 noC_MM	It seemed suspicious to her neighbors that Jim			
+C_MM	It was surprising to him that Anne			
+noC_MM	It was surprising to his classmates that Anne			
+C_MM	It seemed bizarre to him that Linda			
+noC_MM	It seemed bizarre to his friends that Linda			
+C_MM	It seemed strange to him that Carrie			
+noC_MM	It seemed strange to his students that Carrie			
+C_MM	It was amazing to him that Rachel			
+noC_MM	It was amazing to his colleagues that Rachel			
+C_MM	It was irritating to him that Wendy			
+noC_MM	It was irritating to his staff that Wendy			
+C_MM	It seemed funny to him that Judy			
+noC_MM	It seemed funny to his friends that Judy			
+C_MM	It was obvious to her that Brian			
+noC_MM	It was obvious to her coworkers that Brian			
+C_MM	It seemed worrisome to him that Ruth			
+noC_MM	It seemed worrisome to his family that Ruth			
