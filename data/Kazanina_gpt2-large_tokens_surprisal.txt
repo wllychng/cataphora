@@ -1,0 +1,21 @@
+	condition	truncated_stimuli	truncated_tokenized_stimuli	tokens_of_interest	surprisal
+0	C_MM	It was clear to her that Ben	['It', 'Ġwas', 'Ġclear', 'Ġto', 'Ġher', 'Ġthat', 'ĠBen']	['ĠBen']	8.806853294372559
+1	noC_MM	It was clear to her professors that Ben	['It', 'Ġwas', 'Ġclear', 'Ġto', 'Ġher', 'Ġprofessors', 'Ġthat', 'ĠBen']	['ĠBen']	9.418586730957031
+2	C_MM	It seemed suspicious to her that Jim	['It', 'Ġseemed', 'Ġsuspicious', 'Ġto', 'Ġher', 'Ġthat', 'ĠJim']	['ĠJim']	8.338770866394043
+3	noC_MM	It seemed suspicious to her neighbors that Jim	['It', 'Ġseemed', 'Ġsuspicious', 'Ġto', 'Ġher', 'Ġneighbors', 'Ġthat', 'ĠJim']	['ĠJim']	8.809527397155762
+4	C_MM	It was surprising to him that Anne	['It', 'Ġwas', 'Ġsurprising', 'Ġto', 'Ġhim', 'Ġthat', 'ĠAnne']	['ĠAnne']	10.28538703918457
+5	noC_MM	It was surprising to his classmates that Anne	['It', 'Ġwas', 'Ġsurprising', 'Ġto', 'Ġhis', 'Ġclassmates', 'Ġthat', 'ĠAnne']	['ĠAnne']	10.397869110107422
+6	C_MM	It seemed bizarre to him that Linda	['It', 'Ġseemed', 'Ġbizarre', 'Ġto', 'Ġhim', 'Ġthat', 'ĠLinda']	['ĠLinda']	10.133776664733887
+7	noC_MM	It seemed bizarre to his friends that Linda	['It', 'Ġseemed', 'Ġbizarre', 'Ġto', 'Ġhis', 'Ġfriends', 'Ġthat', 'ĠLinda']	['ĠLinda']	10.406167030334473
+8	C_MM	It seemed strange to him that Carrie	['It', 'Ġseemed', 'Ġstrange', 'Ġto', 'Ġhim', 'Ġthat', 'ĠCarrie']	['ĠCarrie']	11.06692123413086
+9	noC_MM	It seemed strange to his students that Carrie	['It', 'Ġseemed', 'Ġstrange', 'Ġto', 'Ġhis', 'Ġstudents', 'Ġthat', 'ĠCarrie']	['ĠCarrie']	11.447456359863281
+10	C_MM	It was amazing to him that Rachel	['It', 'Ġwas', 'Ġamazing', 'Ġto', 'Ġhim', 'Ġthat', 'ĠRachel']	['ĠRachel']	10.31699275970459
+11	noC_MM	It was amazing to his colleagues that Rachel	['It', 'Ġwas', 'Ġamazing', 'Ġto', 'Ġhis', 'Ġcolleagues', 'Ġthat', 'ĠRachel']	['ĠRachel']	10.945305824279785
+12	C_MM	It was irritating to him that Wendy	['It', 'Ġwas', 'Ġirritating', 'Ġto', 'Ġhim', 'Ġthat', 'ĠWendy']	['ĠWendy']	11.046298027038574
+13	noC_MM	It was irritating to his staff that Wendy	['It', 'Ġwas', 'Ġirritating', 'Ġto', 'Ġhis', 'Ġstaff', 'Ġthat', 'ĠWendy']	['ĠWendy']	12.098468780517578
+14	C_MM	It seemed funny to him that Judy	['It', 'Ġseemed', 'Ġfunny', 'Ġto', 'Ġhim', 'Ġthat', 'ĠJudy']	['ĠJudy']	9.666788101196289
+15	noC_MM	It seemed funny to his friends that Judy	['It', 'Ġseemed', 'Ġfunny', 'Ġto', 'Ġhis', 'Ġfriends', 'Ġthat', 'ĠJudy']	['ĠJudy']	10.355241775512695
+16	C_MM	It was obvious to her that Brian	['It', 'Ġwas', 'Ġobvious', 'Ġto', 'Ġher', 'Ġthat', 'ĠBrian']	['ĠBrian']	9.586528778076172
+17	noC_MM	It was obvious to her coworkers that Brian	['It', 'Ġwas', 'Ġobvious', 'Ġto', 'Ġher', 'Ġcoworkers', 'Ġthat', 'ĠBrian']	['ĠBrian']	8.930025100708008
+18	C_MM	It seemed worrisome to him that Ruth	['It', 'Ġseemed', 'Ġworrisome', 'Ġto', 'Ġhim', 'Ġthat', 'ĠRuth']	['ĠRuth']	10.77932357788086
+19	noC_MM	It seemed worrisome to his family that Ruth	['It', 'Ġseemed', 'Ġworrisome', 'Ġto', 'Ġhis', 'Ġfamily', 'Ġthat', 'ĠRuth']	['ĠRuth']	10.87629508972168
