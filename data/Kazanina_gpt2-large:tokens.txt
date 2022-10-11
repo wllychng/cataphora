@@ -1,0 +1,5 @@
+	condition	truncated_stimuli	truncated_tokenized_stimuli	tokens_of_interest	token_ids_of_interest
+0	C_MM	It was clear to her that Ben	['It', 'Ġwas', 'Ġclear', 'Ġto', 'Ġher', 'Ġthat', 'ĠBen']	MANUALLY EDIT	FILL FROM CODE
+1	noC_MM	It was clear to her professors that Ben	['It', 'Ġwas', 'Ġclear', 'Ġto', 'Ġher', 'Ġprofessors', 'Ġthat', 'ĠBen']		
+2	C_MM	It seemed suspicious to her that Jim	['It', 'Ġseemed', 'Ġsuspicious', 'Ġto', 'Ġher', 'Ġthat', 'ĠJim']		
+3	noC_MM	It seemed suspicious to her neighbors that Jim	['It', 'Ġseemed', 'Ġsuspicious', 'Ġto', 'Ġher', 'Ġneighbors', 'Ġthat', 'ĠJim']		
